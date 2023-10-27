@@ -3,6 +3,7 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
+ssh ferreo@direct.pika-os.com 'aptly repo remove pikauwu-rocm libva-dev'
 wget http://deb.debian.org/debian/pool/non-free/i/intel-media-driver-non-free/intel-media-driver-non-free_23.3.5+ds1.orig.tar.xz
 tar -xf ./intel-media-driver-non-free_23.3.5+ds1.orig.tar.xz
 mv -v ./media-driver-intel-media-23.3.5 ./media-driver-intel-media
