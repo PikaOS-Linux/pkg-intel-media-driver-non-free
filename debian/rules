@@ -3,6 +3,7 @@
 include /usr/share/dpkg/architecture.mk
 
 export DEB_BUILD_MAINT_OPTIONS=future=+lfs
+export DEB_CFLAGS_MAINT_APPEND = -Wno-error
 
 %:
 	dh $@ -Scmake+ninja
