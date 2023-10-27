@@ -1,0 +1,36 @@
+From: Sebastian Ramacher <sebastian@ramacher.at>
+Date: Mon, 10 Dec 2018 22:59:20 +0100
+Subject: Remove settings based on ARCH
+
+---
+ media_driver/cmake/linux/media_compile_flags_linux.cmake | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/media_driver/cmake/linux/media_compile_flags_linux.cmake b/media_driver/cmake/linux/media_compile_flags_linux.cmake
+index 0a211fd..69c6140 100755
+--- a/media_driver/cmake/linux/media_compile_flags_linux.cmake
++++ b/media_driver/cmake/linux/media_compile_flags_linux.cmake
+@@ -53,8 +53,6 @@ set(MEDIA_COMPILER_FLAGS_COMMON
+ 
+     # Enable c++14 features
+     -std=c++14
+-    # -m32 or -m64
+-    -m${ARCH}
+ 
+     # Global defines
+     -DLINUX=1
+@@ -80,14 +78,6 @@ if(${UFO_MARCH} STREQUAL "slm")
+     )
+ endif()
+ 
+-if(${ARCH} STREQUAL "64")
+-    set(MEDIA_COMPILER_FLAGS_COMMON
+-        ${MEDIA_COMPILER_FLAGS_COMMON}
+-        -D_AMD64_
+-        -D__CT__
+-    )
+-endif()
+-
+ if(NOT ${PLATFORM} STREQUAL "android")
+     set(MEDIA_COMPILER_FLAGS_COMMON
+         ${MEDIA_COMPILER_FLAGS_COMMON}
