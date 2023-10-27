@@ -9,10 +9,9 @@ Build-Depends:
  dh-sequence-libva,
  cmake,
  libdrm-dev,
- libigdgmm-dev (>= 21.1.1),
- libva-dev (>= 2.12),
+ libigdgmm-dev (>= 23.3.12),
+ libva-dev (>= 2.20),
  libx11-dev,
- ninja-build,
  pkg-config,
 Standards-Version: 4.6.2
 Homepage: https://github.com/intel/media-driver
